@@ -40,4 +40,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+  <modules>
+    <module>docker-machine-rest-server</module>
+  </modules>
 </project>
