@@ -77,7 +77,9 @@ Running in local machine .
 
 ### remote demo 
 
-this is going to need docker-swarm , plz view docker-swarm demo : [docker-swarm-demo](https://github.com/liumapp/docker-swarm-demo)     
+this is going to need docker-swarm , plz view docker-swarm demo : [docker-swarm-demo](https://github.com/liumapp/docker-swarm-demo)
+
+or you can also use docker Digital Ocean  , but this will costs .      
          
                 
                                              
