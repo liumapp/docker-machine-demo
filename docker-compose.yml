@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  rabbitmq:
+    image: liumapp/docker-machine-rest-server:v1.0.0
+    restart: always
+    container_name: docker-machine-rest-server
+    hostname: docker-machine-rest-server
+    ports:
+      - "8080:8080"
+
+
