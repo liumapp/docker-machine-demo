@@ -43,7 +43,13 @@ Running in local machine .
 
          eval "$(docker-machine env default)"
          
-    to connect default machine 
+    to connect default machine
+    
+    after the demo is done , you can run 
+    
+         eval $(docker-machine env -u)
+         
+    to disconnect default.          
     
 * run : 
 
@@ -65,6 +71,13 @@ Running in local machine .
     
 * open your browser , and visit : 192.168.99.100:8080, if there is a page return with "welcome Disguess guest, are you a Girl?" , we are success .
 
-     
+* now , we can stop default , and ready to begine a new demo.
+
+    docker-machine stop default
+
+### remote demo 
+
+this is going to need docker-swarm , plz view docker-swarm demo : [docker-swarm-demo](https://github.com/liumapp/docker-swarm-demo)     
+         
                 
                                              
