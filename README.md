@@ -47,14 +47,18 @@ Under MacOS
         
     to install image
     
-    or you can run : 
-    
-         docker run busybox echo hello world
-         
-    for a test .          
-    
 * run :
         
         docker-compose up -d 
         
-    to run project in docker.                                         
+    to run project in docker(in your docker-machine).
+    
+* check the default ip : 
+
+        docker-machine ip default
+        
+    let's assume the value is 192.168.99.100
+    
+* open your browser , and visit : 192.168.99.100:8080, if there is a page return with "welcome Disguess guest, are you a Girl?" , we are success .     
+                
+                                             
