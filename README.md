@@ -77,9 +77,12 @@ Running in local machine .
 
 ### remote demo 
 
-this is going to need docker-swarm , plz view docker-swarm demo : [docker-swarm-demo](https://github.com/liumapp/docker-swarm-demo)
+Let's suppose that there is a host with a IP address of 192.168.10.10 in the LAN now .
 
-or you can also use docker Digital Ocean  , but this will costs .      
+My next demo will introduce how to deploy Docker in 192.168.10.10 through docker-machine .
+
+ 
+
          
                 
                                              
