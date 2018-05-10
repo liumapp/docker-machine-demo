@@ -5,6 +5,10 @@ Under MacOS
 
 ## how to use
 
+### local demo 
+
+Running in local machine . 
+
 * run :
 
         docker-machine create --driver virtualbox  --engine-registry-mirror https://registry.docker-cn.com default
@@ -59,6 +63,8 @@ Under MacOS
         
     let's assume the value is 192.168.99.100
     
-* open your browser , and visit : 192.168.99.100:8080, if there is a page return with "welcome Disguess guest, are you a Girl?" , we are success .     
+* open your browser , and visit : 192.168.99.100:8080, if there is a page return with "welcome Disguess guest, are you a Girl?" , we are success .
+
+     
                 
                                              
