@@ -77,11 +77,23 @@ Running in local machine .
 
 ### remote demo 
 
-Let's suppose that there is a host with a IP address of 192.168.10.10 in the LAN now .
+Let's suppose that there is a host with a IP address of 106.14.212.41 in the Internet now .
 
-My next demo will introduce how to deploy Docker in 192.168.10.10 through docker-machine .
+My next demo will introduce how to deploy Docker in 106.14.212.41 through docker-machine .
 
- 
+* first off all , we need to se ssh-keygen to create key pairs . And establish a connection with the online host .
+
+    For more details about ssh-keygen , you can view my posts : [ssh免密连接](http://www.liumapp.com/articles/2017/06/28/1498636906233.html) 
+
+* run :
+
+        docker-machine create --driver generic --generic-ip-address 106.14.212.41 remote-1
+        
+    but the probability of this command failure is very high , so i recommend this one : 
+    
+        docker-machine --native-ssh create --driver generic --generic-ip-address 106.14.212.41 remote-1
+       
+*  
 
          
                 
