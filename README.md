@@ -81,19 +81,40 @@ Let's suppose that there is a host with a IP address of 106.14.212.41 in the Int
 
 My next demo will introduce how to deploy Docker in 106.14.212.41 through docker-machine .
 
+Plz ensure that the memory of this host is above 2G, otherwise Docker will not get enough memory allocation. 
+
+In the following example , my remote host running environment is CentOS7 64bits.
+
 * first off all , we need to se ssh-keygen to create key pairs . And establish a connection with the online host .
 
-    For more details about ssh-keygen , you can view my posts : [ssh免密连接](http://www.liumapp.com/articles/2017/06/28/1498636906233.html) 
+    For more details about ssh-keygen , you can view my posts : [ssh免密连接](http://www.liumapp.com/articles/2017/06/28/1498636906233.html)
+    
+        // create new key pairs , named as rsa_docker
+        ssh-keygen
+        // Enter file in which to save the key (/var/root/.ssh/id_rsa): /var/root/.ssh/rsa_docker
+        // Enter your password (123456)
+    
+        // start ssh-agent
+        ssh-agent  
+        
+        // add rsa_docker to ssh-agent
+        ssh-add /var/root/.ssh/rsa_docker
+        //Enter rsa_docker's password (123456)
+        
+        // now , push the public key to the online host 
+        ssh-copy-id root@106.14.212.41
+        
+    plz pay attention that if your computer restarts , you need to run ssh-agent and add rsa_docker to it again .         
 
 * run :
 
         docker-machine create --driver generic --generic-ip-address 106.14.212.41 remote-1
         
-    but the probability of this command failure is very high , so i recommend this one : 
-    
-        docker-machine --native-ssh create --driver generic --generic-ip-address 106.14.212.41 remote-1
-       
-*  
+    it will take a few minutes . 
+           
+    if success , the msg return shall be like : 
+                    
+* 
 
          
                 
