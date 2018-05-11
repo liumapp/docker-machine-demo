@@ -112,10 +112,31 @@ In the following example , my remote host running environment is CentOS7 64bits.
         
     it will take a few minutes . 
            
-    if success , the msg return shall be like : 
+    if success , a Complete success info will return . 
                     
-* 
+* run :
 
+         eval "$(docker-machine env remote-1)"
+         
+    to connect default machine
+    
+    after the demo is done , you can run 
+    
+         eval $(docker-machine env -u)
+         
+    to disconnect default.          
+    
+* run : 
+
+        ./build-image.sh
+        
+    to install image
+    
+* run :
+        
+        docker-compose up -d 
+        
+    to run project in docker(in your remote-1).
          
                 
                                              
